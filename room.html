@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=0">
+	<title>Site 360º</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="loading">
+		Carregando imagens (<span class="loading-progress">0</span>/<span class="loading-total">0</span>)
+	</div>
+	<div class="scene hidden">
+		<div class="cube">
+			<div class="cube-face front"></div>
+			<div class="cube-face bottom">
+				<span class="text" style="color: black; font-family: monospace; font-size: 20px;">Bem-vindo ao meu site!</span>
+			</div>
+			<div class="cube-face right">
+				<span class="text" style="color: black; font-family: monospace;">Jefferson Dantas</span>
+			</div>
+			<div class="cube-face left">
+				<img src="img/photo.png" class="photo" style="filter: drop-shadow(0px 0px 1px black); width: 200px; height: 200px;">
+			</div>
+			<div class="cube-face top">
+				<iframe src="https://www.jeffersondantas.repl.co/" style="width: 80%; height: 80%; border: none; box-shadow: 0 5px 20px rgb(0 0 0 / 50%); border-radius: 20px;"></iframe>
+			</div>
+			<div class="cube-face back">
+				<img src="img/carpet.png" class="carpet" style="filter: drop-shadow(0px 0px 2px black);">
+			</div>
+
+
+			<div class="cube-face sm front"></div>
+			<div class="cube-face sm bottom"></div>
+			<div class="cube-face sm right"></div>
+			<div class="cube-face sm left"></div>
+			<div class="cube-face sm top"></div>
+			<div class="cube-face sm back"></div>
+		</div>
+	</div>
+
+	<canvas></canvas>
+	<script src="script.js"></script>
+</body>
+
+</html>

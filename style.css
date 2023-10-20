@@ -1,0 +1,159 @@
+:root {
+	--size: 500px;
+}
+
+* {
+	user-select: none;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	overscroll-behavior: contain;
+	font-family: sans-serif;
+}
+
+canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	user-select: none;
+	pointer-events: none;
+}
+
+.scene {
+  width: var(--size);
+  height: var(--size);
+  perspective: calc(var(--size) / 2);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cube-face {
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-family: sans-serif;
+  color: white;
+	background-size: cover;
+}
+
+body.shadows .cube-face {
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 0 65px rgba(0,0,0,0.3);
+}
+
+.cube-face.sm {
+	background-size: cover !important;
+  width: 100px;
+  height: 100px;
+  font-size: 2em;
+  top: 200px;
+  left: 200px;
+}
+
+/* Faces do cubo */
+.cube-face.front {
+	background-color: #ff000088;
+	transform: rotateY(0deg) rotateZ(180deg) scaleX(-1) translateZ(250px);
+}
+.cube-face.back {
+	background-color: #00ff0088;
+	transform: rotateY(180deg) rotateZ(0deg) scaleX(-1) translateZ(250px);
+}
+.cube-face.right {
+	background-color: #0000ff88;
+	transform: rotateY(90deg) rotateZ(-90deg) scaleX(-1) translateZ(250px);
+}
+.cube-face.left {
+	background-color: #ffff0088;
+	transform: rotateY(-90deg) rotateZ(90deg) scaleX(-1) translateZ(250px);
+}
+.cube-face.top {
+	background-color: #ff00ff88;
+	transform: rotateX(90deg) rotateZ(180deg) scaleX(-1) translateZ(250px);
+}
+.cube-face.bottom {
+	background: #00ffff88;
+	transform: rotateX(-90deg) rotateZ(0deg) scaleX(-1) translateZ(250px);
+}
+
+/* Faces do dado */
+.cube-face.sm.front {
+	background-color: #00ffff88;
+	transform: rotateY(0deg) translateZ(50px);
+}
+.cube-face.sm.back {
+	background-color: #ff00ff88;
+	transform: rotateY(180deg) translateZ(50px);
+}
+.cube-face.sm.right {
+	background-color: #ffff0088;
+	transform: rotateY( 90deg) translateZ(50px);
+}
+.cube-face.sm.left {
+	background-color: #0000ff88;
+	transform: rotateY(-90deg) translateZ(50px);
+}
+.cube-face.sm.top {
+	background-color: #00ff0088;
+	transform: rotateX(90deg) translateZ(50px);
+}
+.cube-face.sm.bottom {
+	background-color: #ff000088;
+	transform: rotateX(-90deg) translateZ(50px);
+}
+
+/* Texturas */
+body.roof-texture .cube-face.front {
+	background-image: url('img/roof.jpg');
+}
+body.floor-texture .cube-face.back {
+	background-image: url('img/floor.jpg');
+}
+body.wall-texture .cube-face.top,
+body.wall-texture .cube-face.bottom,
+body.wall-texture .cube-face.left,
+body.wall-texture .cube-face.right {
+	background-image: url('img/wall.jpg');
+}
+body.dice-texture .cube-face.sm.front {
+	background-image: url('img/dice1.svg');
+}
+body.dice-texture .cube-face.sm.back {
+	background-image: url('img/dice6.svg');
+}
+body.dice-texture .cube-face.sm.right {
+	background-image: url('img/dice2.svg');
+}
+body.dice-texture .cube-face.sm.left {
+	background-image: url('img/dice5.svg');
+}
+body.dice-texture .cube-face.sm.top {
+	background-image: url('img/dice3.svg');
+}
+body.dice-texture .cube-face.sm.bottom {
+	background-image: url('img/dice4.svg');
+}
+
+.hidden {
+	display: none !important;
+}

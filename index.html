@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=0">
+	<title>Site 360º - Configurar</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container my-4">
+		<h1>Site 360º - Configurar</h1>
+		<small class="text-muted">Quanto mais opções ativadas, mais pesado o site ficará</small>
+
+		<form class="my-3" action="room.html" method="GET">
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="iframe" checked>
+				<span class="form-check-label">Carregar <code>&lt;iframe&gt;</code> do site</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="wallTexture" checked>
+				<span class="form-check-label">Carregar texturas das paredes</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="roofTexture" checked>
+				<span class="form-check-label">Carregar textura do teto</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="floorTexture" checked>
+				<span class="form-check-label">Carregar textura do chão</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="carpet" checked>
+				<span class="form-check-label">Carregar tapete</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="photo" checked>
+				<span class="form-check-label">Carregar retrato</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="shadows" checked>
+				<span class="form-check-label">Mostrar sombras</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="texts" checked>
+				<span class="form-check-label">Mostrar textos</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="dice" checked>
+				<span class="form-check-label">Mostrar dado</span>
+			</label>
+			<label class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" name="diceTexture" checked>
+				<span class="form-check-label">Mostrar textura do dado</span>
+			</label>
+
+			<button type="submit" class="btn btn-success btn-lg mt-3">Iniciar</button>
+		</form>
+
+		<small class="text-muted">Site desenvolvido por Jefferson Dantas em 22/02/2022</small>
+	</div>
+
+	<script src="settings.js"></script>
+</body>
+</html>
